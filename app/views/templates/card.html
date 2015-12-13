@@ -1,0 +1,20 @@
+<div class="card">
+  <h1 class="card-title">{{card.location.city}}</h1>
+  <div class="card-summary-bar">
+    <div class="card-arrow hover left-chevron" ng-click="card.decreaseIndex()">
+      <i class="fa fa-angle-left icon"></i>
+    </div>
+    <div class="card-data">
+      <div class="date">{{card.weather[card.displayIndex].date | date:'fullDate'}}</div>
+      <div class="weather">
+        <div class="av-temp">{{card.weather[card.displayIndex].avTemp}}°</div>
+        <div class="high-low">High: {{card.weather[card.displayIndex].high}}°
+          <br/>Low: {{card.weather[card.displayIndex].low}}°</div>
+        <div class="weather-icon"><i ng-class="card.weather[card.displayIndex].icon"></i></div>
+      </div>
+    </div>
+    <div class="card-arrow hover right-chevron" ng-click="card.increaseIndex()">
+      <i class="fa fa-angle-right icon"></i>
+    </div>
+  </div>
+</div>

@@ -13,6 +13,9 @@ angular.module('weatherApp')
     $scope.addLocation = function() {
       addWeatherData($scope.location, $scope.data);
     };
+    $scope.deleteLocation = function(index) {
+      $scope.data.splice(index, 1);
+    };
     $scope.refreshData = function() {
       refreshData($scope.data);
     };

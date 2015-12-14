@@ -1,5 +1,8 @@
 <div class="card">
-  <h1 class="card-title">{{card.location.city}}</h1>
+  <h1 class="card-title" ng-mouseenter="hover = true" ng-mouseleave="hover = false">
+    {{card.location.city}}
+    <i class="fa fa-times-circle-o x-icon hover" ng-show="hover" ng-click="deleteLocation($index)"></i>
+  </h1>
   <div class="card-summary-bar">
     <div class="card-arrow hover left-chevron" ng-click="card.decreaseIndex()">
       <i class="fa fa-angle-left icon"></i>

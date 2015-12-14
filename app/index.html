@@ -40,7 +40,7 @@
     </div>
     <div class="no-locations" ng-show="data.length === 0">You haven't added any locations yet :(</div>
     <div class="card-container">
-      <card ng-repeat="card in data"></card>
+      <card ng-repeat="card in data track by $index"></card>
     </div>
   </div>
 

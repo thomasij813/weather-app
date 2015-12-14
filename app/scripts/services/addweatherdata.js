@@ -96,7 +96,11 @@ angular.module('weatherApp')
         })
         .then(function(weatherDataResults) {
           weatherObj.weather = weatherDataResults;
-          weatherData.push(weatherObj);
+          if (weatherObj.location.city) {
+            weatherData.push(weatherObj);
+          } else {
+            console.log('Sorry, I do not know where that is...');
+          }
           console.log(weatherData);
         });
     };

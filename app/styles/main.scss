@@ -51,21 +51,29 @@ input {
   font-size: 1.5rem;
 }
 
-.x-icon {
-  font-size: 1rem;
-  position: relative;
-  top: -10px;
-  left: 10px;
+.card {
+  padding-bottom: 20px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  width: 95%;
+  margin: 25px auto;
+  text-align: right;
+  transition: all .5s ease;
+  &:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  }
 }
 
-.card {
-  padding: 20px 0;
+.x-icon {
+  font-size: 1rem;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 5px
 }
 
 .card-title {
   width: 100%;
   text-align: center;
-  margin-bottom: 5px;
+  margin-bottom: 25px;
 }
 
 .card-summary-bar{
@@ -90,7 +98,7 @@ input {
 }
 
 .date {
-  margin-bottom: 5px;
+  margin-bottom: 20px;
   width: 100%;
   text-align: center;
 }

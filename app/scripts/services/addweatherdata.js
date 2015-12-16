@@ -74,17 +74,19 @@ angular.module('weatherApp')
           var data = results.data.results[0];
           var coords = data.geometry.location;
           var city = '';
+          var state = '';
           data.address_components.forEach(function(component) {
             if (component.types[0] === 'locality') {
               city = component.long_name;
             }
             if (component.types[0] === 'administrative_area_level_1') {
-              city += ', ' + component.short_name;
+              state = component.short_name;
             }
           });
           weatherObj.location = {
             coords: coords,
-            city: city
+            city: city,
+            state: state
           };
           return weatherObj.location;
         })
@@ -99,7 +101,7 @@ angular.module('weatherApp')
         })
         .then(function(weatherDataResults) {
           weatherObj.weather = weatherDataResults;
-          if (weatherObj.location.city) {
+          if (weatherObj.location.city && weatherObj.location.state) {
             weatherData.push(weatherObj);
           } else {
             console.log('Sorry, I do not know where that is...');

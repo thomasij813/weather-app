@@ -1,7 +1,7 @@
 <div class="card animated fadeInLeft">
   <i class="fa fa-times-circle-o x-icon hover animaged fadeIn" ng-click="deleteLocation($index)"></i>
   <h1 class="card-title" >
-    {{card.location.city}}
+    {{card.location.city}}{{", " + card.location.state}}
   </h1>
   <div class="card-summary-bar">
     <div class="card-arrow hover left-chevron" ng-click="card.decreaseIndex()">

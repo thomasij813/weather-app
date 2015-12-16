@@ -78,6 +78,9 @@ angular.module('weatherApp')
             if (component.types[0] === 'locality') {
               city = component.long_name;
             }
+            if (component.types[0] === 'administrative_area_level_1') {
+              city += ', ' + component.short_name;
+            }
           });
           weatherObj.location = {
             coords: coords,
